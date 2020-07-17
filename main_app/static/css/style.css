@@ -1,0 +1,36 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+table {
+    color: #333;
+    width: 800px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 3px solid black;
+    margin-left: 200px;
+}
+
+td, th {
+    border: 1px solid transparent;
+    height: 30px;
+}
+
+th {
+    background: #DFDFDF;
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    background: #FAFAFA;
+    text-align: left;
+}
+
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}
