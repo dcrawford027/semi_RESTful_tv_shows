@@ -34,3 +34,41 @@ tr:nth-child(even) td {
 tr:nth-child(odd) td {
     background: #FEFEFE;
 }
+
+.link-right {
+    margin-left: 85%;
+}
+
+.form-container {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.btn-create {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    margin-left: 200px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.edit-container {
+    margin-top: 150px;
+}
+
+.link-center {
+    margin-left: 625px;
+}
