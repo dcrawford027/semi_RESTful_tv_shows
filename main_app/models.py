@@ -7,6 +7,9 @@ class ShowManager(models.Manager):
         error = {}
         if len(postData['title']) < 2:
             error['title'] = "You must include a title at least 2 characters long."
+        show = Show.objects.filter(title=postData['title'])
+        if show:
+            error['title'] = "That show is already listed."
         if len(postData['network']) < 3:
             error['network'] = "You must include a network name at least 3 characters long."
         if len(postData['desc']) > 0 and len(postData['desc']) < 10:
