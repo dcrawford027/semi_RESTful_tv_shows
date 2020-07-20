@@ -72,3 +72,8 @@ button:hover {
 .link-center {
     margin-left: 625px;
 }
+
+.error {
+    color: red;
+    margin-left: 400px;
+}

@@ -10,6 +10,13 @@
 <body>
     <a class="link-right" href="/shows">Go Back</a>
     <h1 class="center-text">Add a New Show</h1>
+    {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="form-container">
         <form action="/add_show" method="POST">
             {% csrf_token %}
@@ -21,7 +28,7 @@
                 <p>Network</p>
                 <input type="text" name="network">
                 <p>Release Date</p>
-                <input type="date" name="release_date">
+                <input type="date" name="release_date" id="release_date">
             </div>
             <div class="row">
                 <p>Description</p>
