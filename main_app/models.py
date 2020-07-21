@@ -16,8 +16,8 @@ class ShowManager(models.Manager):
             error['desc'] = "If you include a description, it must be at least 10 characters long."
         if len(postData['release_date']) < 1:
             error['release_date'] = "You must provide a release date."
-        # elif datetime.datetime(postData['release_date']) >= datetime.now():
-        #     error['release_date'] = "The release date you choose must be in the past."
+        elif datetime.strptime(postData['release_date'], '%Y-%m-%d') >= datetime.now():
+            error['release_date'] = "The release date you choose must be in the past."
         return error
 
 class Show(models.Model):
